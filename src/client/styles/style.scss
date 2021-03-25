@@ -1,0 +1,151 @@
+html { 
+    background: url(https://mijntuindoek.nl/wp-content/uploads/2017/02/Steden_04_san-fransisco-rode-brug_LR.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    align-content: center;
+  }
+  
+  body{
+      font-family: 'Asap', sans-serif;
+      text-align: center;
+  }
+  
+  #app{
+      display: grid;
+      grid-auto-rows: minmax(150px, auto);
+      /* grid-template-columns:  */
+      height:100vh;
+      color: #fffff8;
+      grid-gap: 1em;
+      font-size: 20px;
+  }
+  
+  .heading h1 {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 6em;
+      letter-spacing: 0.1em;
+      font-weight: 150;
+  }
+  
+  .heading {
+      border: 2px white solid;
+   }
+  
+  @media screen and (max-width: 600px) {
+    .heading h1  {
+          font-size: 4em;
+      }
+      #generate {
+          width: 80%;
+      }
+      #city, #date {
+          width: 90%;
+      }
+  }
+  
+  .tripBox {
+      height: 250px;
+      background: rgba(34, 34, 34, .6);
+      width: 55%;
+      margin: 0 auto;
+  
+  }
+  
+  #city {
+      margin: 0 auto;
+      
+  }
+
+  #city:hover, #date:hover {
+    background: #feb591;
+    transition: background 0.5s ease-in-out;
+}
+  
+  .entry{
+      margin: 0 auto;
+      width: 55%;
+      background: rgba(59, 74, 107, .85);
+  }
+  
+  .dateBox {
+      background: rgba(34, 34, 34, .6);
+      width: 55%;
+      margin: 0 auto;
+  }
+  
+  #date {
+      margin: 0 auto;
+  }
+  
+  .main_details {
+      font-size: 16px;
+      color: #fff;
+  }
+  
+  /*  Basic Styling To Override Default For Basic HTML Elements */
+  label{
+      display:block;
+      font-size: 27px;
+  }
+  
+  input{
+      display:block;
+      height: 60px;
+      width: 320px;
+      background: #a53364;
+      color: #222;
+      font-size: 20px;
+      border: none;
+  }
+  
+  button{
+      width: 400px;
+      height: 100px;
+      background: #ea7f75;
+      color: #222;
+      font-size: 26px;
+      border: none;
+      box-shadow: 2px 4px 5px #444;
+  }
+
+  button:hover{
+    background: #b9c0ff;
+    transition: background 0.5s ease-in-out;
+    cursor: pointer;
+  }   
+  
+  h1{
+      font-size: 36px;
+  }
+  
+  textarea{
+      background:#b9c0ff;
+      color: #222;
+      font-size: 20px;
+  }
+  /* Reset style for HTML element on active to have no border*/
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+      outline: none;
+  }
+  /* Style for Placeholder Text*/
+  ::placeholder { /* Firefox, Chrome, Opera */ 
+      color: #222; 
+  
+  } 
+    
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+      color: #222; 
+      font-family: 'Oswald', sans-serif;
+  
+  } 
+    
+  ::-ms-input-placeholder { /* Microsoft Edge */ 
+      color: #222; 
+      font-family: 'Oswald', sans-serif;
+  
+  } 
