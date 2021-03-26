@@ -1,61 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Travel App</title>
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Asap&display=swap" rel="stylesheet">
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="/src/client/styles/style.scss">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Travel App</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Asap&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/client/styles/style.scss">
   </head>
   <body>
-    <div id = "app">
-      <div class="heading">
-        <h1>Let's go places.</h1>
-      </div>
-        
-      <div class ="tripBox">
-        <h2>Plan your Trip</h2>
-        <label for="city">My trip to:</label>
-          <br>
-        <input type="text" id="city" placeholder="enter city here">
-      </div>
-      
-      <div class ="dateBox">
-        <label for="date">Departing on:</label>
-          <br>
-        <input type="text" id="date" placeholder="enter departure date">
-        <br>
-
-        <button id="generate" type ="submit">Generate Trip</button>
-      </div>
-      
-      <div class ="entry details">
-        <div class="trip_header"><h3>Most Recent Trip</h3></div>
-        <div id = "main_details">
-          <div id ="latitude"></div> 
-          <div id = "longitude"></div>
-          <div id = "country"></div>
-          <div id = "temperature"></div>
-          <div id = "weather"></div>
+      <div id = "container">
+        <div class="heading box">
+          <h1>Let's go places.</h1>
         </div>
+        <div id = "content box"> 
+            <div class ="trip box">
+              <h2>Plan your Trip</h2>
+              <label for="city">My trip to:</label>
+              <br>
+              <input type="text" id="city" placeholder="enter city here">
+            </div>
+
+            <div class ="date box">
+              <label for="date">Departing on:</label>
+              <br>
+              <input type="text" id="date" placeholder="enter departure date">
+              <br>
+              <button id="generate" type ="submit">Generate Trip</button>
+            </div>
+
+            <div class ="detail box">
+              <div class="trip_header"><h3>Most Recent Trip</h3></div>
+              <div id = "main_details">
+                <div id ="latitude"></div> 
+                <div id = "longitude"></div>
+                <div id = "country"></div>
+                <div id = "temperature"></div>
+                <div id = "weather"></div>
+              </div>
+            </div>
+            <br>
+            <br>
+            <div id = "photo box">
+              <img id= "tripImg" src = "https://cdn.iconscout.com/icon/free/png-512/aeroplane-airplane-plane-air-transportation-vehicle-pessanger-people-emoj-symbol-30708.png" alt="placeholder">
+            </div>
+        </div>  
       </div>
-      
-      <div id = "photo">
-        <img id= "tripImg" src = "https://i.pinimg.com/originals/53/e4/c0/53e4c0efd78fe5bf0ac51ac5453d966f.jpg" alt="placeholder">
-      </div>
-    </div>
-    <script>
-      // Check that service workers are supported
-      if ('serviceWorker' in navigator) {
-          // Use the window load event to keep the page load performant
-          window.addEventListener('load', () => {
-              navigator.serviceWorker.register('/service-worker.js');
-          });
-      }
-     </script>
   </body>
 </html>

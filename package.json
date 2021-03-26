@@ -52,5 +52,5 @@
     "moduleNameMapper": {
       "^.+\\.(css|less|scss)$": "babel-jest"
     }
-}
+  }
 }
