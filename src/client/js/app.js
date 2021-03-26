@@ -115,12 +115,12 @@ async function getImage(city, country) {
                 res = await fetch(urlCountry);
                 try {
                     data = await res.json();
-                    return data.hits[0].largeImageURL;
+                    return data.hits[0].webformatURL;
                 } catch (error) {
                     console.log("error with country photo", error);
                 }
             }
-            return data.hits[0].largeImageURL;
+            return data.hits[0].webformatURL;
         }
     } catch(error) {
         console.log("error with getting city photo", error);
